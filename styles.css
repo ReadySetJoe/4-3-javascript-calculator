@@ -1,0 +1,64 @@
+
+/* ***********GLOBAL*********** */
+* {box-sizing: border-box;}
+
+* {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 20px;
+  width: 230px;
+  font-size: 20px;
+}
+
+/* ***********HEADER*********** */
+header {
+  height: 80px;
+  background: #58595D
+}
+
+.window-options {
+  height: 10px;
+}
+
+header > div {
+  height: 70px;
+  text-align: right;
+  padding: 7px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+/* **************MAIN************** */
+
+main {
+  height: 240px;
+}
+
+.row:first-child > .col {
+  background: #67696B;
+  width: 25%;
+}
+
+.row {
+  height: 25%;
+  margin: 0;
+}
+
+.col:last-child {
+  background: #FF9D00;
+}
+
+.col {
+  border: solid 1px #58575D;
+  background: #808284;
+}
+
+.svg-fill {
+  fill: #fff;
+}
