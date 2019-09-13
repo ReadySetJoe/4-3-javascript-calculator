@@ -16,6 +16,7 @@ body {
 
 /* ***********HEADER*********** */
 header {
+  overflow: auto;
   height: 80px;
   background: #58595D
 }

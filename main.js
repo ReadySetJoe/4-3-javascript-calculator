@@ -14,6 +14,7 @@ $elements.forEach((element) => {
     console.log(cl);
     if (cl.contains('num')) {
       if ($displayStr=='0' || newNum) {
+        newNum = false;
         $displayStr = this.textContent;
       } else {
       $displayStr += this.textContent;
@@ -51,13 +52,15 @@ $elements.forEach((element) => {
           operationQueued = "-";
         } else if (cl.contains("add")) {
           operationQueued = "+";
-        } else if (cl.contains("equals")) {
-          evaluateDisplay(lastNum, operationQueued, Number($displayStr));
         }
+        console.log("check2: operation = " + operationQueued);
 
       } else if (cl.contains("decimal") && !$displayStr.includes(".")) {
         $displayStr += this.textContent;
+      } else if (cl.contains("equals")) {
+        $displayStr = evaluateDisplay(lastNum, operationQueued, Number($displayStr)).toString();
       }
+
     }
     document.querySelector('.display-text').textContent = $displayStr;
   });
@@ -71,6 +74,13 @@ const evaluateDisplay = (a,oper,b) => {
   } else if (oper == "*") {
     return a * b;
   } else if (oper == "/") {
-    return a / b;
+    if (b == 0) {
+      return "¯\\_(ツ)_/¯"
+    } else {
+      return a / b;
+    }
   }
+  operationQueued = "none";
+  newNum = false;
+
 };
