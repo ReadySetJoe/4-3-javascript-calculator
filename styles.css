@@ -54,6 +54,10 @@ main {
   background: #FF9D00;
 }
 
+.row > .divide {
+  background: #FF9D00;
+}
+
 .col {
   border: solid 1px #58575D;
   background: #808284;
